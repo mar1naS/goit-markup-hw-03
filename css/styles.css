@@ -18,11 +18,23 @@ body {
 /* другорядний колір тексту #212121; */
 /* акцент #2196F3 */
 
+.container {
+  width: 1200px;
+}
+
+.auth-nav {
+  width: 1200px;
+}
+
 .list {
   list-style: none;
 }
 
 /*Logo*/
+
+.logo {
+  display: inline-block;
+}
 
 .logo {
   color: var(--secondary-text-color);
@@ -121,6 +133,11 @@ button {
   cursor: pointer;
 }
 .button.primary {
+  min-width: 216px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border-style: none;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
