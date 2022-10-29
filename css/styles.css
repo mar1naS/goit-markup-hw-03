@@ -20,14 +20,15 @@ body {
 
 .container {
   width: 1200px;
-}
-
-.auth-nav {
-  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid purple;
 }
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*Logo*/
@@ -84,6 +85,10 @@ body {
 /* Hero */
 
 .hero-title {
+  outline: 2px solid purple;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
   color: var(--primary-bg-color);
 
   font-weight: 900;
