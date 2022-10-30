@@ -18,6 +18,13 @@ body {
 /* другорядний колір тексту #212121; */
 /* акцент #2196F3 */
 
+.list,
+.examples {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -25,13 +32,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   outline: 2px solid purple;
-}
-
-.list,
-.examples {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 h1,
@@ -59,7 +59,7 @@ img {
 
 .logo {
   display: inline-block;
-  margin-right: 93px;
+  margin-right: auto;
 
   color: var(--secondary-text-color);
 
@@ -70,6 +70,7 @@ img {
   line-height: 1.19;
   text-decoration: none;
 }
+
 .web-logo {
   color: var(--accent-color);
 }
@@ -78,6 +79,7 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
+  border: 1px solid #ececec;
 }
 /*Site-nav*/
 
@@ -116,12 +118,12 @@ img {
 /* Auth-nav */
 .auth-nav {
   display: flex;
-  margin-left: auto;
 }
 
 .auth-nav .item:not(:last-child) {
   margin-right: 50px;
 }
+
 .auth-nav .link {
   color: var(--primary-text-color);
 
@@ -137,13 +139,12 @@ img {
 }
 /* Hero */
 .hero {
-  margin-bottom: 94px;
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 280px;
+  background-color: #2f303a;
 }
 
 .hero-title {
-  outline: 2px solid purple;
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 30px;
@@ -156,17 +157,23 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-/* Section */
+/* Section Team*/
 
 .section {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
-.list {
+.section-list {
   display: flex;
 }
 
-.list .item:not(:last-child) {
+.section-list .item {
+  background-color: #fff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.section-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -181,18 +188,27 @@ img {
   letter-spacing: 0.03em;
 }
 
+.portrait {
+  margin-bottom: 30px;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.position {
+  margin-bottom: 30px;
+}
 /* Advantages  */
 
 .advantages {
   display: flex;
-}
-
-.advantages {
   justify-content: space-between;
 }
 
 .advantages .item {
   width: 270px;
+  padding-top: 94px;
 }
 
 .advantages .title {
@@ -245,6 +261,11 @@ button {
   align-items: center;
 }
 .button.secondary {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+  border-radius: 4px;
+
   background-color: var(--btn-bck-color);
   color: var(--secondary-text-color);
 }
@@ -256,9 +277,17 @@ button {
 
 /* Portfolio Main Page */
 
-.button-list .item {
+.button-list {
+  display: flex;
   justify-content: center;
-  margin: auto;
+}
+
+.button-list .item {
+  padding-bottom: 34px;
+}
+
+.button-list .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .examples {
@@ -270,9 +299,14 @@ button {
 .examples .item {
   width: 370px;
   margin: 15px;
+  border: 1px solid #eeeeee;
 }
 
 .examples .title {
+  margin-bottom: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+
   color: var(--secondary-text-color);
 
   font-size: 18px;
@@ -283,6 +317,10 @@ button {
 }
 
 .examples .text {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+
   color: var(--primary-text-color);
 
   font-size: 16px;
@@ -294,7 +332,10 @@ button {
 .examples a {
   text-decoration: none;
 }
-/* Footer */
+
+.examples-picture {
+  margin-bottom: 20px;
+}
 
 .list .name {
   color: var(--secondary-text-color);
@@ -310,7 +351,26 @@ button {
   line-height: 1.9;
   text-align: center;
 }
+
+/* Footer */
+
+footer {
+  background-color: #2f303a;
+}
+
+.logo.footer {
+  color: var(--primary-bg-color);
+  margin-bottom: 20px;
+}
+
+.list-footer {
+  list-style: none;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .contact .address {
+  margin-bottom: 9px;
+
   color: var(--primary-bg-color);
   font-style: normal;
   font-size: 14px;
@@ -319,6 +379,8 @@ button {
 }
 
 .contact .info {
+  margin-bottom: 9px;
+
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -331,13 +393,6 @@ button {
 .contact .address:hover,
 .contact .address:focus {
   color: var(--accent-color);
-}
-.contact {
-  display: flex;
-}
-
-.contact .item {
-  flex-direction: column;
 }
 
 .visually-hidden {
