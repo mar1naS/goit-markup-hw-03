@@ -55,6 +55,11 @@ img {
   width: 100%;
 }
 
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
 /*Logo*/
 
 .logo {
@@ -79,7 +84,7 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 /*Site-nav*/
 
@@ -91,7 +96,7 @@ img {
   margin-right: 50px;
 }
 
-.site-nav .item:last-child {
+.site-nav {
   margin-right: 344px;
 }
 
@@ -111,6 +116,7 @@ img {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  text-decoration: underline;
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -157,11 +163,42 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-/* Section Team*/
 
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+/* Advantages  */
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages .item {
+  width: 270px;
+}
+
+.advantages .title {
+  margin-bottom: 10px;
+
+  color: var(--secondary-text-color);
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantages .text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/* Projects */
+
+.section-projects {
+  padding-top: 0px;
+}
+
+/* Section Team*/
+.section-team {
+  background-color: var(--btn-bck-color);
 }
 
 .section-list {
@@ -199,32 +236,7 @@ img {
 .position {
   margin-bottom: 30px;
 }
-/* Advantages  */
 
-.advantages {
-  display: flex;
-  justify-content: space-between;
-}
-
-.advantages .item {
-  width: 270px;
-  padding-top: 94px;
-}
-
-.advantages .title {
-  margin-bottom: 10px;
-
-  color: var(--secondary-text-color);
-
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.advantages .text {
-  font-size: 14px;
-  line-height: 1.71;
-}
 /* Button */
 
 button {
@@ -261,18 +273,20 @@ button {
   align-items: center;
 }
 .button.secondary {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  padding: 6px 25px;
   border-color: transparent;
   border-radius: 4px;
 
   background-color: var(--btn-bck-color);
   color: var(--secondary-text-color);
 }
+
 .button.secondary:hover,
 .button.secondary:focus {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Portfolio Main Page */
@@ -282,8 +296,8 @@ button {
   justify-content: center;
 }
 
-.button-list .item {
-  padding-bottom: 34px;
+.button-list {
+  margin-bottom: 34px;
 }
 
 .button-list .item:not(:last-child) {
@@ -299,7 +313,6 @@ button {
 .examples .item {
   width: 370px;
   margin: 15px;
-  border: 1px solid #eeeeee;
 }
 
 .examples .title {
@@ -333,10 +346,6 @@ button {
   text-decoration: none;
 }
 
-.examples-picture {
-  margin-bottom: 20px;
-}
-
 .list .name {
   color: var(--secondary-text-color);
 
@@ -350,6 +359,13 @@ button {
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
+}
+
+.text-border {
+  padding-top: 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 /* Footer */
