@@ -80,11 +80,14 @@ img {
   color: var(--accent-color);
 }
 
+header {
+  border-bottom: 1px solid #ececec;
+}
+
 /*Main-nav*/
 .main-nav {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 /*Site-nav*/
 
@@ -116,12 +119,14 @@ img {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
-  text-decoration: underline;
 }
+
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
 /* Auth-nav */
+
 .auth-nav {
   display: flex;
 }
